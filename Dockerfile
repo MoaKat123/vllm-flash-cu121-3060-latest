@@ -20,8 +20,8 @@ RUN python3 -m pip install --upgrade pip setuptools wheel packaging build
 # Install PyTorch with CUDA 11.8 support
 RUN pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 
-# Install FlashAttention v2.4.2 via prebuilt wheel (no source build)
-RUN pip install flash-attn==2.4.2 --extra-index-url https://pypi.nvidia.com
+# ✅ Install FlashAttention v2.3.6 (prebuilt wheel available for Python 3.10 + CUDA 11.8)
+RUN pip install flash-attn==2.3.6 --extra-index-url https://pypi.nvidia.com
 
 # Install vLLM from PyPI (no source build)
 RUN pip install vllm==0.2.4
